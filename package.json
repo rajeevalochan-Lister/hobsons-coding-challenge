@@ -1,0 +1,24 @@
+{
+  "name": "Lister-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-dev": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajeevalochan-Lister/hobsons-coding-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajeevalochan-Lister/hobsons-coding-challenge/issues"
+  },
+  "homepage": "https://github.com/rajeevalochan-Lister/hobsons-coding-challenge#readme",
+  "devDependencies": {
+    "jest": "^26.1.0"
+  }
+}
