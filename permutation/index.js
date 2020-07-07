@@ -1,4 +1,8 @@
-function permute(permutation) {
+/**
+ * function to genrate the posibble permutaion for the give set of numbers
+ * @param {*} permutation
+ */
+function permute(permutation = []) {
   var arrayLength = permutation.length,
     result = [permutation.slice()],
     copyArray = new Array(arrayLength).fill(0),
@@ -27,7 +31,10 @@ function permute(permutation) {
   return checkDuplicatePermutaion(result);
 }
 
-//Remove Duplicate permutation from the arrayList
+/**
+ * Remove Duplicate permutation from the arrayList
+ * @param {[]} arrayInput
+ */
 function checkDuplicatePermutaion(arrayInput = []) {
   let hashObject = {};
   let result = [];

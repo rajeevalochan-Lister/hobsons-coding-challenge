@@ -1,4 +1,7 @@
-//Split odd ,even numbers and pushed into separate array list.
+/**
+ * Split odd ,even numbers and pushed into separate array list.
+ * @param {[]} inputArray
+ */
 function oddEvenSplit(inputArray = []) {
   const evenArr = [];
   const oddArr = [];
