@@ -1,38 +1,50 @@
-function splitEven(input = []) {
-  return input.filter((val) => val % 2 === 0);
+//Split odd ,even numbers and pushed into separate array list.
+function oddEvenSplit(inputArray = []) {
+  const evenArr = [];
+  const oddArr = [];
+  const inputLength = inputArray.length;
+  for (let i = 0; i < inputLength; i++) {
+    //checks for null/undefined
+    if (!inputArray[i] && inputArray[i] !== 0) {
+      return "Invalid input";
+    }
+
+    if (inputArray[i] % 2 === 0) {
+      evenArr.push(inputArray[i]);
+    } else {
+      oddArr.push(inputArray[i]);
+    }
+  }
+  return [...sort(oddArr), ...sort(evenArr)];
 }
 
-function splitOdd(input = []) {
-  return input.filter((val) => val % 2 !== 0);
-}
-
+/**
+ * function to sort numbers from the given array
+ * @param {array} array
+ */
 function sort(array = []) {
   var isDone = false;
   while (!isDone) {
     isDone = true;
-    for (var i = 1; i < array.length; i += 1) {
+    for (let i = 1; i < array.length; i++) {
       if (array[i - 1] > array[i]) {
         isDone = false;
         [array[i - 1], array[i]] = [array[i], array[i - 1]];
       }
     }
   }
-
   return array;
 }
 
+/**
+ * Split even/odd number and return an array of sorted odd-even number
+ * @param {[]]} input
+ */
 function splitOddEven(input = []) {
   if (!Array.isArray(input) && !input.length) {
     return [];
   }
-
-  const sortOdd = sort(splitOdd(input));
-  const sortEven = sort(splitEven(input));
-  if (!sortOdd || !sortEven) {
-    return [];
-  }
-
-  return [...sortOdd, ...sortEven];
+  return oddEvenSplit(input);
 }
 
 module.exports = splitOddEven;

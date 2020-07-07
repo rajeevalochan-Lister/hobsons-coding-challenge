@@ -19,9 +19,6 @@ describe("test cases for running the coding challenge", () => {
       [1, 2, 1],
       [2, 1, 1],
       [1, 1, 2],
-      [1, 1, 2],
-      [2, 1, 1],
-      [1, 2, 1],
     ]);
   });
 
@@ -37,14 +34,10 @@ describe("test cases for running the coding challenge", () => {
   });
 
   it("return no value for array with null / undefined values", () => {
-    expect(permute([1, null, 3])).toEqual(
-      "no value provided in the input array"
-    );
+    expect(permute([1, null, 3])).toEqual("Invalid input");
   });
 
   it("return no value for array with null / undefined values", () => {
-    expect(permute([1, undefined, 3])).toEqual(
-      "no value provided in the input array"
-    );
+    expect(permute([1, undefined, 3])).toEqual("Invalid input");
   });
 });
